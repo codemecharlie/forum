@@ -10,8 +10,8 @@ def get_posts():
   c = db.cursor()
   c.execute("select content, time from posts order by time desc")
   posts = c.fetchall()
-  db.close()
   return posts
+  db.close()
 
 def add_post(content):
   """Add a post to the 'database' with the current timestamp."""
